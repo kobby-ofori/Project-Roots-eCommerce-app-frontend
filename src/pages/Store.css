@@ -1,0 +1,17 @@
+.Store-container{
+  padding-left: 20px;
+  background-color: rgba(255, 228, 196, 0.196);
+}
+.store-info-card{
+  margin-top: 30px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 2px 2px 2px 4px rgba(53, 50, 50, 0.461);
+}
+.store-info-card:hover {
+  cursor: pointer;
+  transform: scale(1.03);
+}
+.store-info-card {
+  transition: transform 0.2s;
+}

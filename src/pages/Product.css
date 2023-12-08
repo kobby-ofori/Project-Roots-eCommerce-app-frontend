@@ -1,0 +1,47 @@
+.custom-card {
+  border: none;
+  font-family: "Times New Roman", Times, serif;
+  background-color: transparent;
+  cursor: pointer;
+  padding-right: 2rem;
+  margin-top: 2rem;
+}
+.custom-card .custom-img {
+  border-radius: 25px;
+}
+.custom-img:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+.custom-img {
+  transition: transform 0.2s;
+}
+.custom-card-body:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+.custom-card-body {
+  transition: transform 0.2s;
+}
+.card-btn {
+  background: linear-gradient(90deg, rgba(255, 0, 0, 0.767), rgba(255, 217, 0, 0.777), rgba(0, 128, 0, 0.846));
+  color: black;
+  border: none;
+  border-radius: 0 50px 0 50px;
+}
+.search-input{
+  width: 250px;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  margin-right: 20px;
+  border: 2px solid black;
+  border-radius: 25px;
+}
+.select-input{
+  width: 160px;
+  padding: 0 5px 0 5px;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  border: 2px solid black;
+  border-radius: 10px;
+}

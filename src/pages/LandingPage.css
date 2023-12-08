@@ -1,0 +1,110 @@
+body {
+  background-color: aliceblue;
+}
+.hero-section {
+  background-image: url("../images/kente1.jpg");
+  height: 500px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-bottom: 15px;
+}
+.hero-pic2 {
+  background-image: url("../images/kenteweaving.jpg");
+  height: 500px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-bottom: 15px;
+}
+.hero-pic3 {
+  background-image: url("../images/smock4.jpg");
+  height: 500px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-bottom: 15px;
+}
+.col-card {
+  background-color: aliceblue;
+}
+.landing-card1 {
+  background-image: url("../images/kente3.jpeg");
+  background-size: contain;
+  height: 480px;
+  margin-bottom: 15px;
+}
+.landing-card2 {
+  background-image: url("../images/smock1.jpg");
+  background-size: contain;
+  height: 480px;
+  margin-bottom: 15px;
+}
+.landing-card3 {
+  background-image: url("../images/smock3.jpg");
+  background-size: contain;
+  height: 480px;
+  margin-bottom: 15px;
+}
+.landing-card4 {
+  background-image: url("../images/kente4.jpg");
+  background-size: contain;
+  height: 480px;
+  margin-bottom: 15px;
+}
+.landing-card5 {
+  background-image: url("../images/kente5.jpg");
+  background-size: contain;
+  height: 480px;
+  margin-bottom: 15px;
+}
+.landing-card6 {
+  background-image: url("../images/smock2.jpeg");
+  background-size: contain;
+  height: 480px;
+  margin-bottom: 15px;
+}
+.hero-text {
+  font-family: "Times New Roman", Times, serif;
+  font-size: large;
+  font-weight: bold;
+}
+.vertical-line {
+  background-color: rgba(0, 0, 0, 0.683);
+  border-left: 1px solid gray;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.landing-footer {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: small;
+  margin-bottom: 10px;
+}
+.img-description {
+  font-weight: bold;
+  width: 400px;
+  margin-left: 35%;
+  text-align: center;
+  border: none;
+  border-radius: 13%;
+  padding: 0 15px;
+  background-color: rgba(25, 22, 22, 0.447);
+  color: rgba(245, 245, 245, 0.834);
+}
+.info-section-row {
+  width: 80%;
+  margin-left: 10%;
+}
+/* Add this CSS to your stylesheet or style section */
+.info-section-row p {
+  width: fit-content;
+  cursor: pointer;
+  text-decoration: none;
+  transition: text-decoration 0.2s; /* Add a smooth transition effect */
+}
+
+.info-section-row p:hover {
+  text-decoration: underline;
+}
+
+.links {
+  color: rgba(0, 145, 255, 0.958);
+  cursor: pointer;
+}

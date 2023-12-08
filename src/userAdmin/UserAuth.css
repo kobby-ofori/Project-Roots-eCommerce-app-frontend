@@ -1,0 +1,113 @@
+.userauth-body {
+  background-image: url("../images/pexelsreynaldo.jpg");
+  background-size: cover;
+  margin: 0;
+  display: flex;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.userauth-container {
+  display: flex;
+}
+
+.userauth-card-img {
+  opacity: 80%;
+}
+
+.userauth-details {
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.2);
+  border-top-right-radius: 16px;
+  border-bottom-right-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  padding: 10px 20px;
+  min-height: 453px;
+}
+
+.userauth-input {
+  margin-top: 30px;
+}
+
+.userauth-card-input {
+  padding: 5px 10px;
+  font-size: large;
+  border-radius: 10px;
+  border: none;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.489);
+  outline-color: rgba(255, 228, 196, 0.493);
+  margin-top: 15px;
+}
+
+.userauth-btn {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.userauth-card-button {
+  font-size: medium;
+  font-family: "Times New Roman", Times, serif;
+  padding: 5px 7px;
+  border-radius: 5px;
+  border: none;
+  margin: 0 25px;
+  background-color: rgba(255, 228, 196, 0.856);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.489);
+}
+.userauth-card-button:hover {
+  cursor: pointer;
+  box-shadow: 5px 10px 15px rgba(0, 0, 0, 0.575);
+  transform: scale(1.1);
+  transition: all 300ms ease;
+}
+.userauth-card-button:active {
+  transform: scale(0.85);
+}
+
+.icons {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  border-top: 2px solid rgba(255, 255, 255, 0.3);
+  border-right: 2px solid rgba(0, 0, 0, 0.493);
+  border-left: 2px solid rgba(0, 0, 0, 0.493);
+  border-top-right-radius: 12px;
+  border-top-left-radius: 12px;
+}
+.icon-img {
+  padding-right: 15px;
+  padding-left: 15px;
+  padding-top: 10px;
+}
+
+.userauth-card-h3 {
+  margin-top: 35px;
+  text-align: center;
+  margin-bottom: 10px;
+  font-family: 'Times New Roman', Times, serif;
+}
+.userauth-card-hr {
+  background-color: white;
+  height: 40px;
+  width: 3px;
+  margin-left: 50%;
+}
+
+.login-links:hover {
+  box-shadow: 5px 10px 15px rgba(0, 0, 0, 0.575);
+  transform: scale(1.1);
+  transition: all 300ms ease;
+}
+.login-links:active {
+  transform: scale(0.9);
+}
+
+.create-account{
+  margin-top: 30px;
+  text-align: right;
+}
+
