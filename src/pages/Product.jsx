@@ -55,7 +55,7 @@ const Product = () => {
           .map((product) => (
             <Col key={product._id} md={3} xs={12}>
               <div className="card-wrapper">
-                {/* Add a wrapper for spacing */}
+                {/* a wrapper for spacing */}
                 <Card style={{ width: "18rem" }} className="card custom-card">
                   <Card.Img
                     variant="top"

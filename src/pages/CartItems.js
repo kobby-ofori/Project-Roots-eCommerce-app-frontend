@@ -1,4 +1,3 @@
-//everything is new
 
 import React, { useContext } from "react";
 import { Button } from "react-bootstrap"; 

@@ -39,12 +39,12 @@ const ProductsList = () => {
       "Are you sure you want to delete this product?"
     );
     if (confirmDelete) {
-      // Send a DELETE request to your API to delete the product
+      // Send a DELETE request to API to delete the product
       //new code after .delete(`${baseURL}/${productId}` 
       axios
         .delete(`${baseURL}/${productId}`)
         .then((response) => {
-          // Remove the deleted product from the state
+          // remove the deleted product from the state
           setProducts(products.filter((product) => product._id !== productId));
           setSuccessAlert(true);
         })
@@ -109,7 +109,6 @@ const ProductsList = () => {
           <Modal.Title>Edit Product</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          {/* edit form or input fields are here */}
           {selectedProduct && (
             <>
               <input

@@ -42,8 +42,7 @@ const ProductMethods = ({ product, onDelete, onUpdate }) => {
           <Modal.Title>Edit Product</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          {/* Place your edit form or input fields here */}
-          {/* Example: */}
+          
           <input type="text" defaultValue={product.name} />
           
         </Modal.Body>

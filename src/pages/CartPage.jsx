@@ -35,8 +35,8 @@ const CartPage = () => {
       return;
     }
 
-    // Check if the user has read the terms and agreements (replace this with your logic)
-    const hasReadTerms = user.hasReadTerms; // Change this based on your user data structure
+    // Check if the user has read the terms and agreements
+    const hasReadTerms = user.hasReadTerms; 
 
     if (!hasReadTerms) {
       // Display a confirmation message with a link to the terms and agreements
