@@ -7,7 +7,7 @@ import 'react-phone-number-input/style.css'
 import PhoneInputWithCountrySelect from "react-phone-number-input";
 
 const CheckoutModal = ({ show, handleShow, handleClose, totalAmount }) => {
-  const publicKey = "pk_test_07c26cdf8175455e2aaf0daba06a989d80e76f09";
+  const publicKey = process.env.REACT_APP_PAYSTACK_KEY;
   const amount = totalAmount;
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");
