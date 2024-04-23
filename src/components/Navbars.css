@@ -1,14 +1,16 @@
 .nav-link-text{
+  text-decoration: none;
+  color: black;
   font-weight: bold;
   font-family: Georgia, 'Times New Roman', Times, serif;
   padding-right: 15px;
   font-size: large;
 }
 .nav-link-text:hover{
+  text-decoration: none;
   color: rgb(119, 59, 9);
 }
 .brand-name{
-  text-decoration: none;
   font-size: larger;
   color: black;
   font-family: fantasy;

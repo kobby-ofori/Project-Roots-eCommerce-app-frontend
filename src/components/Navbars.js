@@ -28,7 +28,7 @@ const Navbars = () => {
     <Navbar expand="lg" className="bg-body-tertiary" sticky="top">
       <Container fluid>
         <Navbar.Brand href="#" className="brand-detail">
-          <Link to="/">
+          <Link to="/" className="nav-link-text">
             <span className="brand-name">ROOTS</span>
             {/* <img src={onlineShopping} alt="Home-page-logo" /> */}
           </Link>
