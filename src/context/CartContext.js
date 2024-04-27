@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from "react";
 import { createContext } from "react";
 import { fetchProducts } from "../utils/Database"; 
@@ -62,6 +61,7 @@ export const CartContextProvider = (props) => {
 
   const contextValue = {
     cartItems,
+    products,
     addToCart,
     removeFromCart,
     updateCartItemCount,

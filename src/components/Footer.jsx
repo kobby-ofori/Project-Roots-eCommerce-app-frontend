@@ -1,7 +1,16 @@
 import React from 'react'
 import { Col, Container, Row } from 'react-bootstrap'
+// import { useNavigate } from 'react-router-dom'
 
 const Footer = () => {
+  // const navigate = useNavigate;
+
+  // const handleNavigation=()=>{
+  //   navigate("/infosection")
+  // }
+
+  const currentYear = new Date().getFullYear();
+
   return (
     <Container>
       <Row className="about-row">
@@ -76,10 +85,10 @@ const Footer = () => {
       <Row className="justify-content-md-center landing-footer">
         <hr />
         <Col xs lg="3">
-          <p>Copyright &copy; 2023 Roots Inc. All rights reserved.</p>
+          <p>Copyright &copy; 2023 - {currentYear} Roots Inc. All rights reserved.</p>
         </Col>
         <Col md="auto">
-          <a href="jjj">
+          <a href="/infosection">
             <h6>
               Privacy Policy<span className="vertical-line"></span> Terms of Use
               <span className="vertical-line"></span> Sales and Refunds

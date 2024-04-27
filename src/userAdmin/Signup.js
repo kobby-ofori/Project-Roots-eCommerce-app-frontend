@@ -1,12 +1,14 @@
-
-
 import React, { useState } from "react";
 import "./UserAuth.css";
 import pexelspixabay1 from "../images/pexelspixabay1.jpg";
 import { Container } from "react-bootstrap";
 import { useSignup } from "../hooks/useSignup";
+import { useNavigate } from "react-router-dom";
 
 const Signup = () => {
+  // navigation
+  const navigate = useNavigate();
+
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const { signup, error, isLoading } = useSignup();
@@ -16,7 +18,6 @@ const Signup = () => {
 
     await signup(email, password);
   };
-
   return (
     <Container className="userauth-body" fluid>
       <div className="userauth-container" id="container">
@@ -55,6 +56,23 @@ const Signup = () => {
               {error && <div className="error">{error}</div>}
             </div>
           </form>
+          <br />
+          <div className="have-account">
+            <span>Already have an Account?</span>
+            <br />
+            <span>
+              <button
+                onClick={() => navigate("/login")}
+                style={{
+                  color: "red",
+                  border: "none",
+                  backgroundColor: "transparent",
+                }}
+              >
+                Log in
+              </button>
+            </span>
+          </div>
         </div>
       </div>
     </Container>

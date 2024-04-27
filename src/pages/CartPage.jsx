@@ -4,18 +4,18 @@ import { useNavigate } from "react-router-dom";
 import CheckoutModal from "../components/CheckoutModal";
 import { CartContext } from "../context/CartContext";
 import { ProductItem } from "../utils/fetchedProducts";
-import AddedItems from "./AddedItems";
+//import AddedItems from "./AddedItems";
 //import useAuthContext for user
- import {useAuthContext} from "../hooks/useAuthContext"
-
+import { useAuthContext } from "../hooks/useAuthContext";
+import CartItems from "./CartItems";
 
 const CartPage = () => {
   //new code
   const [errorMessage, setErrorMessage] = useState(""); // State for error message
   // new code
-  const {user} = useAuthContext()
+  const { user } = useAuthContext();
   //end of new code
-  
+
   // define useNavigate as navigate to navigate to the store page when continue shopping button is clicked
   const navigate = useNavigate();
 
@@ -31,17 +31,17 @@ const CartPage = () => {
   //new code
   const handleModalShow = () => {
     if (!user) {
-      setErrorMessage('You must be logged in');
+      setErrorMessage("You must be logged in");
       return;
     }
 
     // Check if the user has read the terms and agreements
-    const hasReadTerms = user.hasReadTerms; 
+    const hasReadTerms = user.hasReadTerms;
 
     if (!hasReadTerms) {
       // Display a confirmation message with a link to the terms and agreements
       const confirmTerms = window.confirm(
-        'By proceeding, you confirm that you have read and agree to our terms and agreements. You can find it at the Info-Section page.'
+        "By proceeding, you confirm that you have read and agree to our terms and agreements. You can find it at the Info-Section page."
       );
 
       if (!confirmTerms) {
@@ -58,7 +58,7 @@ const CartPage = () => {
   //end of new code
 
   // Filter products with a count greater than 0
-  const selectedProducts = ProductItem.filter((product) => cartItems[product._id] > 0);
+  //const selectedProducts = ProductItem.filter((product) => cartItems[product._id] > 0);
 
   return (
     <Container>
@@ -73,10 +73,16 @@ const CartPage = () => {
           <h3>Selected Products:</h3>
 
           {/* Map over the selected products */}
-          {selectedProducts.map((product) => (
+          {/* {selectedProducts.map((product) => (
             <AddedItems key={product._id} data={product} />
-          ))}
+          ))} */}
 
+          {ProductItem.map((product) => {
+            if (cartItems[product._id] !== 0) {
+              return <CartItems key={product._id} data={product} />;
+            }
+            return null;
+          })}
         </Col>
         <Col className="check-out-col">
           {/* other... */}

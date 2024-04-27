@@ -12,9 +12,8 @@ import Login from "../userAdmin/Login";
 import { useAuthContext } from "../hooks/useAuthContext";
 
 const Router = () => {
-  //NEW CODE
+  
   const { user } = useAuthContext();
-  //END OF NEW CODE
 
   return (
     <Routes>

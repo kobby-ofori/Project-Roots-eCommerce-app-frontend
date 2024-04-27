@@ -6,7 +6,7 @@ import "./Product.css";
 
 const Product = () => {
   const [product, setProductData] = useState([]);
-  //new code for search and sort
+  //search and sort
   const [searchInput, setSearchInput] = useState("");
   const [sortCriteria, setSortCriteria] = useState("");
 
@@ -17,7 +17,17 @@ const Product = () => {
     setProductData(ProductItem);
   }, []);
 
-  console.log(ProductItem);
+  // console.log(ProductItem);
+  // console.log(product.map((prices) => parseInt(prices.price)));
+
+  const sortedProduct = [...product]; // Copy of product array to prevent mutation
+
+  // Sort products based on the selected criteria
+  if (sortCriteria === "price-asc") {
+    sortedProduct.sort((a, b) => parseFloat(a.price) - parseFloat(b.price));
+  } else if (sortCriteria === "price-desc") {
+    sortedProduct.sort((a, b) => parseFloat(b.price) - parseFloat(a.price));
+  }
 
   return (
     <Container>
@@ -38,13 +48,13 @@ const Product = () => {
             value={sortCriteria}
             onChange={(e) => setSortCriteria(e.target.value)}
           >
-            <option value="">Sort by</option>
+            <option value="">Default</option>
             <option value="price-asc">Price: Low to High</option>
             <option value="price-desc">Price: High to Low</option>
           </select>
         </Row>
 
-        {product
+        {sortedProduct
           .filter(
             (product) =>
               product.title.toLowerCase().includes(searchInput.toLowerCase()) ||

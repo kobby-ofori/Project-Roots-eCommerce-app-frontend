@@ -1,7 +1,30 @@
+.custom-navbar{
+  background-color: transparent;
+  padding: 10px 5px;
+  transition: background-color 0.4s ease-in-out;
+}
+.custom-navbar.active{
+  background-image: url("../images/navBackground.jpg");
+  opacity: 98%;
+  background-size: cover;
+  border-bottom-left-radius: 20%;
+  border-bottom-right-radius: 20%;
+  padding: 10px 5px;
+  /* color: aliceblue; */
+  box-shadow: rgba(37, 35, 35, 0.5) 5px 5px 5px 5px;
+}
+.nav-link-text.active{
+  text-decoration: none;
+  color: aliceblue;
+  font-weight: 400;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  padding-right: 15px;
+  font-size: large;
+}
 .nav-link-text{
   text-decoration: none;
   color: black;
-  font-weight: bold;
+  font-weight: 400;
   font-family: Georgia, 'Times New Roman', Times, serif;
   padding-right: 15px;
   font-size: large;
@@ -9,6 +32,7 @@
 .nav-link-text:hover{
   text-decoration: none;
   color: rgb(119, 59, 9);
+  transition: color 0.5s ease-in-out;
 }
 .brand-name{
   font-size: larger;

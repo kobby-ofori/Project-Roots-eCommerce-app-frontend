@@ -6,4 +6,5 @@ export let ProductItem = [];
 
 fetchProducts().then((data) => {
   ProductItem = data;
+  console.log(ProductItem.length);
 });

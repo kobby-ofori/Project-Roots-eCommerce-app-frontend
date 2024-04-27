@@ -13,5 +13,5 @@
   transform: scale(1.03);
 }
 .store-info-card {
-  transition: transform 0.2s;
+  transition: transform 0.5s ease-in-out;
 }
