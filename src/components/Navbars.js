@@ -20,6 +20,11 @@ const Navbars = () => {
 
   const { logout } = useLogout();
   const { user } = useAuthContext();
+  const handlePostNav = () => {
+    if (!user) {
+      alert("log in to post product");
+    }
+  };
 
   const handleClick = () => {
     logout();
@@ -122,7 +127,11 @@ const Navbars = () => {
               className="nav-link-text"
             >
               <NavDropdown.Item href="#action/3.1">
-                <Link to="/post" className="nav-link-text">
+                <Link
+                  to="/post"
+                  className="nav-link-text"
+                  onClick={handlePostNav}
+                >
                   Post
                 </Link>
               </NavDropdown.Item>
