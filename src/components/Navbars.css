@@ -4,18 +4,18 @@
   transition: background-color 0.4s ease-in-out;
 }
 .custom-navbar.active{
-  background-image: url("../images/navBackground.jpg");
+  background: whitesmoke;
   opacity: 98%;
   background-size: cover;
   border-bottom-left-radius: 20%;
   border-bottom-right-radius: 20%;
   padding: 10px 5px;
   /* color: aliceblue; */
-  box-shadow: rgba(37, 35, 35, 0.5) 5px 5px 5px 5px;
+  box-shadow: rgba(69, 65, 65, 0.309) 5px 5px 3px 2px;
 }
 .nav-link-text.active{
   text-decoration: none;
-  color: aliceblue;
+  color: black;
   font-weight: 400;
   font-family: Georgia, 'Times New Roman', Times, serif;
   padding-right: 15px;

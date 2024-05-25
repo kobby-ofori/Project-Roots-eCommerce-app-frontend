@@ -6,10 +6,47 @@ import { GrFormNextLink } from "react-icons/gr";
 import { FiExternalLink } from "react-icons/fi";
 import { useNavigate } from "react-router-dom";
 import Footer from "../components/Footer";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import Slider from "react-slick";
 
 const LandingPage = () => {
   // define useNavigate as navigate to navigate to the store page when continue shopping button is clicked
   const navigate = useNavigate();
+  //settings for slick slider
+  var settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          infinite: true,
+          dots: true,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          initialSlide: 2,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
+  };
   return (
     <Container fluid>
       <Row>
@@ -29,8 +66,51 @@ const LandingPage = () => {
           </p>
         </Col>
       </Row>
+      <br />
       <Row>
-        <Col className="hero-section">
+        <Col className="carousel-column">
+          <CarouselFadeExample />
+        </Col>
+        <div className="carousel-cards Ads-cards">
+          <div>
+            <h5>Top Deal</h5>
+          </div>
+          <div>
+            <h5>Deals in Fabrics</h5>
+            <img src={require("../images/kente3.jpeg")} alt="" className="Ads-card-img"/>
+          </div>
+          <div>
+            <h5>Choose from Variety</h5>
+            <img src={require("../images/kente4.jpg")} alt="" className="Ads-card-img"/>
+          </div>
+          <div>
+            <h5>Traditional Fit</h5><img src={require("../images/clothedpeople2.jpg")} alt="" className="Ads-card-img"/>
+          </div>
+        </div>
+      </Row>
+      <Row>
+        <Col className="Ads-cards alternative">
+          <div>
+            <h5>Men</h5>
+            <img src={require("../images/Ankara.jpeg")} alt="" className="Ads-card-img"/>
+          </div>
+          <div>
+            <h5>Women</h5>
+            <img src={require("../images/Ankara.jpeg")} alt="" className="Ads-card-img"/>
+          </div>
+          <div>
+            <h5>Children</h5>
+            <img src={require("../images/kenteChild.jpg")} alt="" className="Ads-card-img"/>
+          </div>
+          <div>
+            <h5>Discount</h5>
+            <img src={require("../images/Ankara.jpeg")} alt="" className="Ads-card-img"/>
+          </div>
+        </Col>
+      </Row>
+
+      <Row>
+        <Col data-aos="fade-up" className="hero-section">
           <div className="img-description">
             <h1>Kente</h1>
             <h4>Handwoven. Cultural Significance. Colors & Patterns.</h4>
@@ -54,7 +134,26 @@ const LandingPage = () => {
         </Col>
       </Row>
       <Row>
-        <Col className="hero-pic2">
+        <div className="custom-slider-cards">
+          <Slider {...settings}>
+            <div>
+              <h5>Men</h5>
+            </div>
+            <div>
+              <h5>Women</h5>
+            </div>
+            <div>
+              <h5>Children</h5>
+            </div>
+            <div>
+              <h5>Discount</h5>
+            </div>
+          </Slider>
+        </div>
+      </Row>
+      <br />
+      <Row>
+        <Col data-aos="fade-up" className="hero-pic2">
           <div className="img-description">
             <h1>Smock</h1>
             <h4>Originality. Decorations. Design & Fabric.</h4>
@@ -79,7 +178,7 @@ const LandingPage = () => {
         </Col>
       </Row>
       <Row>
-        <Col className="hero-pic3">
+        <Col data-aos="fade-right" className="hero-pic3">
           <div className="img-description">
             <h1>Kete</h1>
             <h4>International Recognition. Cultural Heritage.</h4>
@@ -127,12 +226,6 @@ const LandingPage = () => {
           <Col className="col-card landing-card6"></Col>
         </Col>
       </Row>
-      <Row>
-        <Col>
-          <CarouselFadeExample />
-        </Col>
-      </Row>
-      <br />
       <hr />
       <Row>
         <Footer />

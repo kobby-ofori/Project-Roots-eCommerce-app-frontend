@@ -23,7 +23,7 @@ function CarouselFade(props) { // Accept carouselItems as a prop
         <Carousel.Caption style={{color:'yellowgreen'}}>
           <h3>Vendors</h3>
           <p>
-            Post products whenever & whereever!
+            Post products whenever & where ever!
           </p>
         </Carousel.Caption>
       </Carousel.Item>

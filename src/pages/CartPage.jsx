@@ -1,4 +1,5 @@
 import React, { useContext, useState } from "react";
+import "./CartPage.css";
 import { Alert, Col, Container, Row } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 import CheckoutModal from "../components/CheckoutModal";
@@ -61,7 +62,19 @@ const CartPage = () => {
   //const selectedProducts = ProductItem.filter((product) => cartItems[product._id] > 0);
 
   return (
-    <Container>
+    <Container fluid className="cartpage-container">
+      <div className="cart-hero-section">
+        <div>
+          <h4>Free delivery when you use our website (Accra & Kumasi only)</h4>
+        </div>
+      </div>
+      <div className="advert">
+        <p>
+          20% off all products. Delivery within 72hours on working days from 7am
+          to 8pm GMT
+        </p>
+      </div>
+      <br />
       <h2>Cart</h2>
       {errorMessage && (
         <Alert variant="danger" onClose={() => setErrorMessage("")} dismissible>
@@ -70,7 +83,15 @@ const CartPage = () => {
       )}
       <Row>
         <Col className="seleted-products-col">
-          <h3>Selected Products:</h3>
+          <div>
+            <h5>SHOPPING CART</h5>
+            <p>Do you have an account? Sign in to continue shopping</p>
+            <button className="cart-page-btn" onClick={() => navigate("/login")}>
+              Sign in
+            </button>
+            <br />
+          </div>
+          <h4>Selected Products:</h4>
 
           {/* Map over the selected products */}
           {/* {selectedProducts.map((product) => (
@@ -85,6 +106,10 @@ const CartPage = () => {
           })}
         </Col>
         <Col className="check-out-col">
+          <div>
+            <h5>ORDER SUMMARY</h5>
+            <input type="text" placeholder="HAVE A PROMO CODE?" />
+          </div>
           {/* other... */}
           {totalAmount > 0 ? (
             <div className="cart-checkout" style={{ position: "fixed" }}>
@@ -92,12 +117,12 @@ const CartPage = () => {
               <button onClick={() => navigate("/store")} className="Cart-btn">
                 Continue Shopping
               </button>
-              <button onClick={handleModalShow} className="Cart-btn">
+              <button onClick={handleModalShow} className="checkout-btn">
                 Checkout
               </button>
             </div>
           ) : (
-            <h3>Cart is Empty</h3>
+            <h4>Cart is Empty</h4>
           )}
         </Col>
       </Row>

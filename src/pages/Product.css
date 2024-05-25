@@ -58,3 +58,16 @@
   border: 2px solid black;
   border-radius: 10px;
 }
+.pending{
+  color: aliceblue;
+  /* animation: loadingtext 4s infinite; */
+  animation-name: loadingtext;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+}
+@keyframes loadingtext {
+  0%   {color: black}
+  25%  {color: aliceblue}
+  50%  {color: black}
+  100% {color: aliceblue}
+}

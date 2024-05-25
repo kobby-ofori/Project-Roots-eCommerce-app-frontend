@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import "./Navbars.css";
 import { Badge, Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
 import { Link } from "react-router-dom";
@@ -40,7 +40,12 @@ const Navbars = () => {
     }
   };
 
-  window.addEventListener("scroll", changeBackground);
+  useEffect(() => {
+    window.addEventListener("scroll", changeBackground);
+    return () => {
+      window.removeEventListener("scroll", changeBackground);
+    };
+  }, []);
 
   return (
     <Navbar
@@ -82,19 +87,6 @@ const Navbars = () => {
               Info-Section
             </Link>
           </Nav.Link>
-          {/* {user && (
-            <div>
-              <span className="user-email">{user.email}</span>
-              <button className="logout-button" onClick={handleClick}>Log out</button>
-            </div>
-          )}
-          {!user && (
-            <div>
-              <Link to="/login" className="nav-link-text">
-                <CiUser size={24}/>
-              </Link>
-            </div>
-          )} */}
 
           {user && (
             <NavDropdown
@@ -118,7 +110,7 @@ const Navbars = () => {
             <NavDropdown
               title={
                 backgroundColor ? (
-                  <CiUser color="#fcf803" size={24} />
+                  <CiUser color="black" size={24} />
                 ) : (
                   <CiUser size={24} />
                 )
@@ -147,31 +139,10 @@ const Navbars = () => {
               </NavDropdown.Item>
             </NavDropdown>
           )}
-          {/* <NavDropdown
-            title={<CiUser size={24}/>}
-            id="basic-nav-dropdown"
-            className="nav-link-text"
-          >
-            <NavDropdown.Item href="#action/3.1">
-              <Link to="/login" className="nav-link-text">
-                Post
-              </Link>
-            </NavDropdown.Item>
-            <NavDropdown.Item href="#action/3.1">
-              <Link to="/signup" className="nav-link-text">
-                Sign in
-              </Link>
-            </NavDropdown.Item>
-            <NavDropdown.Item href="#action/3.1">
-              <Link to="/post" className="nav-link-text">
-                Sign up
-              </Link>
-            </NavDropdown.Item>
-          </NavDropdown> */}
           <Nav.Link href="#action2" className="nav-link-text">
             <Link to="/cartpage" className="nav-link-text">
               {backgroundColor ? (
-                <GiShoppingCart color="#ffff" size={32} />
+                <GiShoppingCart color="black" size={32} />
               ) : (
                 <GiShoppingCart size={32} />
               )}
