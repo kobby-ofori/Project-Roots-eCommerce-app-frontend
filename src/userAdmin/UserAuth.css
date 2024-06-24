@@ -10,6 +10,9 @@
 
 .userauth-container {
   display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
 }
 
 .userauth-card-img {
@@ -111,3 +114,43 @@
   text-align: right;
 }
 
+
+/* @MEDIA QUERIES */
+
+/* Extra small devices (phones, 350px and down) */
+@media only screen and (max-width: 450px) {
+  .userauth-container {
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0 15px 0;
+  }
+  
+  .userauth-card-img {
+    opacity: 80%;
+    width: 90%;
+    margin-left: 5%;
+  }
+
+  .userauth-details {
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 0 0 16px 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 10px 20px;
+    width: 90%;
+    min-height: 453px;
+  }
+
+  .userauth-card-input {
+    max-width: 90%;
+    padding: 5px 10px;
+    font-size: large;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.489);
+    outline-color: rgba(255, 228, 196, 0.493);
+    margin-top: 15px;
+  }
+}

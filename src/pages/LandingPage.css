@@ -1,5 +1,9 @@
 body {
-  background-image: linear-gradient(to bottom right, #ecddce, rgb(232, 244, 255));
+  background-image: linear-gradient(
+    to bottom right,
+    #ecddce,
+    rgb(232, 244, 255)
+  );
 }
 .carousel-column {
   position: relative;
@@ -12,6 +16,9 @@ body {
   position: absolute;
   top: 500px;
   z-index: 2;
+}
+.media-query-slider {
+  display: none;
 }
 .Ads-cards > div {
   border-radius: 10px;
@@ -63,8 +70,8 @@ body {
   box-shadow: 2px 2px 2px 4px rgba(206, 205, 205, 0.461);
   background-color: blueviolet;
   text-align: left;
-  padding: 10px 0px 10px 10px;
-  margin: 10px 10px;
+  padding: 0px;
+  margin: 10px 5px;
 }
 .slick-slide > div:hover {
   cursor: pointer;
@@ -74,64 +81,54 @@ body {
   transition: transform 0.5s ease-in-out;
 }
 .hero-section {
-  background-image: url("../images/kente1.jpg");
   height: 500px;
   background-size: cover;
   background-repeat: no-repeat;
   margin-bottom: 15px;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: center;
+}
+.hero-pic1 {
+  background-image: url("../images/kente1.jpg");
 }
 .hero-pic2 {
   background-image: url("../images/kenteweaving.jpg");
-  height: 500px;
-  background-size: cover;
-  background-repeat: no-repeat;
-  margin-bottom: 15px;
 }
 .hero-pic3 {
   background-image: url("../images/smock4.jpg");
-  height: 500px;
-  background-size: cover;
-  background-repeat: no-repeat;
-  margin-bottom: 15px;
 }
 .col-card {
   background-color: aliceblue;
 }
-.landing-card1 {
-  background-image: url("../images/kente3.jpeg");
+.landing-card1,
+.landing-card2,
+.landing-card3,
+.landing-card4,
+.landing-card5,
+.landing-card6 {
   background-size: contain;
   height: 480px;
   margin-bottom: 15px;
+}
+.landing-card1 {
+  background-image: url("../images/kente3.jpeg");
 }
 .landing-card2 {
   background-image: url("../images/smock1.jpg");
-  background-size: contain;
-  height: 480px;
-  margin-bottom: 15px;
 }
 .landing-card3 {
   background-image: url("../images/smock3.jpg");
-  background-size: contain;
-  height: 480px;
-  margin-bottom: 15px;
 }
 .landing-card4 {
   background-image: url("../images/kente4.jpg");
-  background-size: contain;
-  height: 480px;
-  margin-bottom: 15px;
 }
 .landing-card5 {
   background-image: url("../images/kente5.jpg");
-  background-size: contain;
-  height: 480px;
-  margin-bottom: 15px;
 }
 .landing-card6 {
   background-image: url("../images/smock2.jpeg");
-  background-size: contain;
-  height: 480px;
-  margin-bottom: 15px;
 }
 .hero-text {
   font-family: "Times New Roman", Times, serif;
@@ -151,8 +148,8 @@ body {
 }
 .img-description {
   font-weight: bold;
-  width: 400px;
-  margin-left: 35%;
+  width: 85%;
+  /* margin-left: 35%; */
   text-align: center;
   border: none;
   border-radius: 13%;
@@ -179,4 +176,60 @@ body {
 .links {
   color: rgba(0, 145, 255, 0.958);
   cursor: pointer;
+}
+
+/* @MEDIA QUERIES */
+
+/* Extra small devices (phones, 350px and down) */
+@media only screen and (max-width: 450px) {
+  .carousel-cards {
+    display: none;
+  }
+  .media-query-slider {
+    display: block;
+    flex-flow: row wrap;
+    /* justify-content: space-evenly; */
+    /* position: absolute;
+    top: 600px;
+    z-index: 2; */
+  }
+  .slick-slide .media-query-div,
+  .media-query-div2,
+  .media-query-div3,
+  .media-query-div4,
+  .media-query-div5,
+  .media-query-div6,
+  .media-query-div7,
+  .media-query-div8 {
+    background-size: cover;
+    width: 210px;
+    height: 210px;
+  }
+  .slick-slide .media-query-div {
+    background-image: url("../images/adinkraSymbols.jpg");
+  }
+  .slick-slide .media-query-div2 {
+    background-image: url("../images/kente3.jpeg");
+  }
+  .slick-slide .media-query-div3 {
+    background-image: url("../images/kente4.jpg");
+  }
+  .slick-slide .media-query-div4 {
+    background-image: url("../images/clothedpeople2.jpg");
+  }
+  .slick-slide .media-query-div5 {
+    background-image: url("../images/Ankara.jpeg");
+  }
+  .slick-slide .media-query-div6 {
+    background-image: url("../images/adinkraSymbols.jpg");
+  }
+  .slick-slide .media-query-div7 {
+    background-image: url("../images/kenteChild.jpg");
+  }
+  .slick-slide .media-query-div8 {
+    background-image: url("../images/adinkraSymbols.jpg");
+  }
+  .alternative {
+    display: none;
+  }
 }

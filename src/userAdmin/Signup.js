@@ -15,8 +15,15 @@ const Signup = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
-    await signup(email, password);
+    if (email && password) {
+      await signup(email, password);
+    } else if (!email && !password) {
+      alert("enter valid email & password to continue");
+    } else if (!email) {
+      alert("enter valid email to continue");
+    } else if (!password) {
+      alert("enter valid password to continue");
+    }
   };
   return (
     <Container className="userauth-body" fluid>

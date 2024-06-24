@@ -49,6 +49,7 @@ const LandingPage = () => {
   };
   return (
     <Container fluid>
+      {/* First row: navbar */}
       <Row>
         <Col className="navbar"></Col>
       </Row>
@@ -67,50 +68,111 @@ const LandingPage = () => {
         </Col>
       </Row>
       <br />
+      {/* Carousel row */}
       <Row>
         <Col className="carousel-column">
           <CarouselFadeExample />
         </Col>
+        {/* First Ads cards row */}
         <div className="carousel-cards Ads-cards">
           <div>
             <h5>Top Deal</h5>
           </div>
           <div>
             <h5>Deals in Fabrics</h5>
-            <img src={require("../images/kente3.jpeg")} alt="" className="Ads-card-img"/>
+            <img
+              src={require("../images/kente3.jpeg")}
+              alt=""
+              className="Ads-card-img"
+            />
           </div>
           <div>
             <h5>Choose from Variety</h5>
-            <img src={require("../images/kente4.jpg")} alt="" className="Ads-card-img"/>
+            <img
+              src={require("../images/kente4.jpg")}
+              alt=""
+              className="Ads-card-img"
+            />
           </div>
           <div>
-            <h5>Traditional Fit</h5><img src={require("../images/clothedpeople2.jpg")} alt="" className="Ads-card-img"/>
+            <h5>Traditional Fit</h5>
+            <img
+              src={require("../images/clothedpeople2.jpg")}
+              alt=""
+              className="Ads-card-img"
+            />
           </div>
         </div>
+        {/* Ads cards for other media screens */}
+        <div className="custom-slider-cards media-query-slider">
+          <Slider {...settings}>
+            <div className="media-query-div">
+              <h5>Top Deal</h5>
+            </div>
+            <div className="media-query-div2">
+              <h5>Deals in Fabrics</h5>
+            </div>
+            <div className="media-query-div3">
+              <h5>Choose from Variety</h5>
+            </div>
+            <div className="media-query-div4">
+              <h5>Traditional Fit</h5>
+            </div>
+            <div className="media-query-div5">
+              <h5>Men</h5>
+            </div>
+            <div className="media-query-div6">
+              <h5>Women</h5>
+            </div>
+            <div className="media-query-div7">
+              <h5>Children</h5>
+            </div>
+            <div className="media-query-div8">
+              <h5>Discount</h5>
+            </div>
+          </Slider>
+        </div>
       </Row>
+      {/* Second Ads cards row */}
       <Row>
         <Col className="Ads-cards alternative">
           <div>
             <h5>Men</h5>
-            <img src={require("../images/Ankara.jpeg")} alt="" className="Ads-card-img"/>
+            <img
+              src={require("../images/Ankara.jpeg")}
+              alt=""
+              className="Ads-card-img"
+            />
           </div>
           <div>
             <h5>Women</h5>
-            <img src={require("../images/Ankara.jpeg")} alt="" className="Ads-card-img"/>
+            <img
+              src={require("../images/Ankara.jpeg")}
+              alt=""
+              className="Ads-card-img"
+            />
           </div>
           <div>
             <h5>Children</h5>
-            <img src={require("../images/kenteChild.jpg")} alt="" className="Ads-card-img"/>
+            <img
+              src={require("../images/kenteChild.jpg")}
+              alt=""
+              className="Ads-card-img"
+            />
           </div>
           <div>
             <h5>Discount</h5>
-            <img src={require("../images/Ankara.jpeg")} alt="" className="Ads-card-img"/>
+            <img
+              src={require("../images/Ankara.jpeg")}
+              alt=""
+              className="Ads-card-img"
+            />
           </div>
         </Col>
       </Row>
 
       <Row>
-        <Col data-aos="fade-up" className="hero-section">
+        <Col data-aos="fade-up" className="hero-section hero-pic1">
           <div className="img-description">
             <h1>Kente</h1>
             <h4>Handwoven. Cultural Significance. Colors & Patterns.</h4>
@@ -153,7 +215,7 @@ const LandingPage = () => {
       </Row>
       <br />
       <Row>
-        <Col data-aos="fade-up" className="hero-pic2">
+        <Col data-aos="fade-up" className="hero-section hero-pic2">
           <div className="img-description">
             <h1>Smock</h1>
             <h4>Originality. Decorations. Design & Fabric.</h4>
@@ -178,7 +240,7 @@ const LandingPage = () => {
         </Col>
       </Row>
       <Row>
-        <Col data-aos="fade-right" className="hero-pic3">
+        <Col data-aos="fade-right" className="hero-section hero-pic3">
           <div className="img-description">
             <h1>Kete</h1>
             <h4>International Recognition. Cultural Heritage.</h4>

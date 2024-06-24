@@ -16,10 +16,24 @@ const Login = () => {
   const [password, setPassword] = useState("");
   const { login, error, isLoading } = useLogin();
 
+  // const [valid, setValid] = useState(false);
+  // const checkInputValidity=()=>{
+  //   if (email) {
+  //     setValid(true);
+  //   }
+  // }
+
   const handleSubmit = async (e) => {
     e.preventDefault();
-
-    await login(email, password);
+    if (email && password) {
+      await login(email, password);
+    } else if (!email && !password) {
+      alert("enter valid email & password to continue");
+    } else if (!email) {
+      alert("enter valid email to continue");
+    } else if (!password) {
+      alert("enter valid password to continue");
+    }
   };
 
   return (
