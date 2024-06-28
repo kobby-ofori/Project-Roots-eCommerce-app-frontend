@@ -1,70 +1,186 @@
-# Getting Started with Create React App
+# ROOTS
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Roots E-commerce App is a web application designed to address the challenges faced by traditional attire/fabric sellers and designers, such as kente, kete, and gonja weavers. These local entrepreneurs often lack the funds to rent shops in busy areas, which hinders their ability to sell their products effectively. Roots aims to revolutionize the traditional attire industry by creating an easy and affordable online marketplace. This platform empowers local entrepreneurs to showcase and sell their products effortlessly, regardless of financial constraints and geographical limitations.
 
-## Available Scripts
+## Table of Contents
 
-In the project directory, you can run:
+- [Introduction](#introduction)
+- [Features](#features)
+- [Tech Stack](#tech-stack)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [License](#license)
+- [Contact](#contact)
 
-### `yarn start`
+## Introduction
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Roots E-commerce App provides a platform for traditional attire and fabric sellers to reach a broader audience without needing physical stores. This online marketplace allows sellers to display their products, manage inventory, and handle sales transactions in a user-friendly environment. Buyers can browse various traditional attires, place orders, and deliver them to their doorstep.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Features
 
-### `yarn test`
+- **User Authentication**: Secure login and registration for users and sellers.
+- **Product Listings**: Sellers can list their traditional attire products with images, descriptions, and prices.
+- **Shopping Cart**: Buyers can add products to their cart and proceed to checkout.
+- **Payment Integration**: Secure payment processing through the Paystack payment gateway.
+- **Responsive Design**: Accessible on both desktop and mobile devices.
+  
+## Tech Stack
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Frontend
 
-### `yarn build`
+- React
+- Redux Toolkit
+- Bootstrap
+- React Bootstrap
+- React Router DOM
+- React Icons
+- React Paystack
+- React Phone Number Input
+- React Slick
+- Slick Carousel
+- Axios
+- AOS (Animate On Scroll)
+- Web Vitals
+- Testing Library (Jest, React)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+#### Frontend Dependencies
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```json
+{
+  "@reduxjs/toolkit": "^2.0.1",
+  "@testing-library/jest-dom": "^5.14.1",
+  "@testing-library/react": "^13.0.0",
+  "@testing-library/user-event": "^13.2.1",
+  "aos": "^2.3.4",
+  "axios": "^1.6.2",
+  "bootstrap": "^5.3.2",
+  "react": "^18.2.0",
+  "react-bootstrap": "^2.9.1",
+  "react-dom": "^18.2.0",
+  "react-icons": "^4.12.0",
+  "react-paystack": "^4.0.3",
+  "react-phone-number-input": "^3.3.7",
+  "react-redux": "^9.0.2",
+  "react-router-dom": "^6.20.1",
+  "react-scripts": "5.0.1",
+  "react-slick": "^0.30.2",
+  "slick-carousel": "^1.8.1",
+  "web-vitals": "^2.1.0"
+}
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Backend
 
-### `yarn eject`
+- Node.js
+- Express
+- MongoDB
+- Mongoose
+- Bcrypt
+- JSON Web Token (JWT)
+- Multer
+- Validator
+- Nodemon
+- CORS
+- Dotenv
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+#### Backend Dependencies
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```json
+{
+  "bcrypt": "^5.1.1",
+  "cors": "^2.8.5",
+  "dotenv": "^16.3.1",
+  "express": "^4.18.2",
+  "jsonwebtoken": "^9.0.2",
+  "mongoose": "^8.0.3",
+  "multer": "^1.4.5-lts.1",
+  "nodemon": "^3.0.2",
+  "validator": "^13.11.0"
+}
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Installation
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Prerequisites
 
-## Learn More
+- Node.js and npm installed on your machine
+- MongoDB database
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Frontend Setup
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+1. Clone the repository:
+    ```bash
+    git clone https://github.com/yourusername/roots-ecommerce-app.git
+    cd roots-e-commerce-app/frontend
+    ```
 
-### Code Splitting
+2. Install dependencies:
+    ```bash
+    yarn install
+    ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+3. Start the development server:
+    ```bash
+    yarn start
+    ```
 
-### Analyzing the Bundle Size
+### Backend Setup
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+1. Navigate to the backend directory:
+    ```bash
+    cd ../backend
+    ```
 
-### Making a Progressive Web App
+2. Install dependencies:
+    ```bash
+    yarn install
+    ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+3. Create a `.env` file and configure your environment variables:
+    ```plaintext
+    REACT_APP_MONGO_URI=your_mongodb_connection_string
+    JWT_SECRET=your_jwt_secret
+    REACT_APP_PAYSTACK_SECRET_KEY=your_paystack_secret_key
+    ```
 
-### Advanced Configuration
+4. Start the development server:
+    ```bash
+    yarn start
+    ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## Usage
 
-### Deployment
+1. Open your browser and navigate to `http://localhost:3000` to access the frontend.
+2. Use `http://localhost:8001` for backend API endpoints.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## Contributing
 
-### `yarn build` fails to minify
+We welcome contributions to the Roots E-commerce App! To contribute:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+1. Fork the repository.
+2. Create a new branch:
+    ```bash
+    git checkout -b feature-branch
+    ```
+3. Make your changes and commit them:
+    ```bash
+    git commit -m 'Add some feature'
+    ```
+4. Push to the branch:
+    ```bash
+    git push origin feature-branch
+    ```
+5. Open a pull request.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Contact
+
+For any questions or suggestions, please contact:
+
+- Name: Elijah Ofori
+- Email: kobbyofori9@gmail.com
+- GitHub: [kobby-ofori](https://github.com/kobby-ofori)
