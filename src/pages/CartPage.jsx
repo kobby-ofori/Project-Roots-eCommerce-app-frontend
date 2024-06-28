@@ -112,7 +112,7 @@ const CartPage = () => {
           </div>
           {/* other... */}
           {totalAmount > 0 ? (
-            <div className="cart-checkout" style={{ position: "fixed" }}>
+            <div className="cart-checkout" >
               <p>Subtotal: GHS {totalAmount}</p>
               <button onClick={() => navigate("/store")} className="Cart-btn">
                 Continue Shopping
