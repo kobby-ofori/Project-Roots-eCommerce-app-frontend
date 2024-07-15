@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Alert, Button, Col, Container, Form, Row } from "react-bootstrap";
 import { HiSaveAs } from "react-icons/hi";
 import axios from "axios"; // Import Axios
-import { postURL } from "../utils/constant"; // Import API endpoint URL
+//import { postURL } from "../utils/constant"; // Import API endpoint URL
 import ProductsList from "../components/ProductsList";
 //import useAuthContext for user
 // import {useAuthContext} from "../hooks/useAuthContext"
@@ -18,7 +18,8 @@ const PostProduct = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
+    const postURL = process.env.REACT_APP_POST_URL
+    
     try {
       const formData = new FormData();
       formData.append("name", name);
@@ -29,7 +30,7 @@ const PostProduct = () => {
 
       // Send a POST request to server with the form data
       // new code after await axios.post(`${postURL}`and before }, formData
-      await axios.post(`${postURL}`, formData);
+      await axios.post(postURL, formData);
 
       // Display a success message
       setSuccessMessage("Product posted successfully!");
