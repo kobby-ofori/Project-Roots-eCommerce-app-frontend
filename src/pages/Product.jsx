@@ -63,7 +63,7 @@ const Product = () => {
                 .includes(searchInput.toLowerCase())
           )
           .map((product) => (
-            <Col key={product._id} md={3} xs={12}>
+            <Col key={product._id} md={3} xs={6}>
               <div className="card-wrapper">
                 {/* a wrapper for spacing */}
                 <Card style={{ width: "18rem" }} className="card custom-card">

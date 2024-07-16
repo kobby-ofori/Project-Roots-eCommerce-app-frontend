@@ -232,4 +232,15 @@ body {
   .alternative {
     display: none;
   }
+  .landing-card1,
+  .landing-card2,
+  .landing-card3,
+  .landing-card4,
+  .landing-card5,
+  .landing-card6 {
+    background-size: contain;
+    height: 120px;
+    width: 160px;
+    margin-bottom: 15px;
+  }
 }

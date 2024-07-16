@@ -41,7 +41,7 @@ const LandingPage = () => {
       {
         breakpoint: 480,
         settings: {
-          slidesToShow: 1,
+          slidesToShow: 2,
           slidesToScroll: 1,
         },
       },
@@ -265,26 +265,26 @@ const LandingPage = () => {
         </Col>
       </Row>
       <Row>
-        <Col md={6} xs={12}>
+        <Col md={6} sm={6} xs={6}>
           <Col className="col-card landing-card1"></Col>
         </Col>
-        <Col md={6} xs={12}>
+        <Col md={6} sm={6} xs={6}>
           <Col className="col-card landing-card2"></Col>
         </Col>
       </Row>
       <Row>
-        <Col md={6} xs={12}>
+        <Col md={6} sm={6} xs={6}>
           <Col className="col-card landing-card3"></Col>
         </Col>
-        <Col md={6} xs={12}>
+        <Col md={6} sm={6} xs={6}>
           <Col className="col-card landing-card4 video-card"></Col>
         </Col>
       </Row>
       <Row>
-        <Col md={6} xs={12}>
+        <Col md={6} sm={6} xs={6}>
           <Col className="col-card landing-card5"></Col>
         </Col>
-        <Col md={6} xs={12}>
+        <Col md={6} sm={6} xs={6}>
           <Col className="col-card landing-card6"></Col>
         </Col>
       </Row>
