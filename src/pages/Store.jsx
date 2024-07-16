@@ -21,7 +21,14 @@ const Store = () => {
             image1={shopping}
             image2={sliderpicn1}
             image3={sliderpicn2}
-            height={"500px"}
+            carouselCaption1={"Online market"}
+            carouselDescription1={
+              "Shop authentic Ghanaian fabrics and attire online now!"
+            }
+            carouselCaption2={"Accessibility & Distribution"}
+            carouselDescription2={"Increase business agility and global reach!"}
+            carouselCaption3={"Vendors"}
+            carouselDescription3={"Post products whenever & where ever!"}
           />
         </Row>
       </Container>

@@ -49,6 +49,7 @@ const Navbars = () => {
 
   return (
     <Navbar
+      collapseOnSelect
       expand="lg"
       className={backgroundColor ? "custom-navbar active" : "custom-navbar"}
       sticky="top"

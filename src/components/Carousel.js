@@ -1,30 +1,30 @@
 import React from "react";
 import Carousel from "react-bootstrap/Carousel";
+import "./Carousel.css";
 
-function CarouselFade(props) { // Accept carouselItems as a prop
+function CarouselFade(props) {
+  // Accept carouselItems as a prop
   return (
     <Carousel fade>
       <Carousel.Item>
-        <img src={props.image1} alt="" width={"100%"} height={props.height} />
-        <Carousel.Caption style={{color:'yellowgreen'}}>
-          <h3>Online market</h3>
-          <p>Shop authentic Ghanaian fabrics and attire online now!</p>
+        <img src={props.image1} alt="" className="carousel-pic" />
+        <Carousel.Caption style={{ color: "yellowgreen" }}>
+          <h3>{props.carouselCaption1}</h3>
+          <p>{props.carouselDescription1}</p>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
-        <img src={props.image2} alt="" width={"100%"} height={props.height} />
-        <Carousel.Caption style={{color:'yellowgreen'}}>
-          <h3>Accessibility & Distribution</h3>
-          <p>Increase business agility and global reach!</p>
+        <img src={props.image2} alt="" className="carousel-pic" />
+        <Carousel.Caption style={{ color: "yellowgreen" }}>
+          <h3>{props.carouselCaption2}</h3>
+          <p>{props.carouselDescription2}</p>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
-        <img src={props.image3} alt="" width={"100%"} height={props.height} />
-        <Carousel.Caption style={{color:'yellowgreen'}}>
-          <h3>Vendors</h3>
-          <p>
-            Post products whenever & where ever!
-          </p>
+        <img src={props.image3} alt="" className="carousel-pic" />
+        <Carousel.Caption style={{ color: "yellowgreen" }}>
+          <h3>{props.carouselCaption3}</h3>
+          <p>{props.carouselDescription3}</p>
         </Carousel.Caption>
       </Carousel.Item>
     </Carousel>

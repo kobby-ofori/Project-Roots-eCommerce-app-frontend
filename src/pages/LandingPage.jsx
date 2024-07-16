@@ -1,7 +1,6 @@
 import React from "react";
 import "./LandingPage.css";
 import { Col, Container, Row } from "react-bootstrap";
-import CarouselFadeExample from "../components/Swiper";
 import { GrFormNextLink } from "react-icons/gr";
 import { FiExternalLink } from "react-icons/fi";
 import { useNavigate } from "react-router-dom";
@@ -9,6 +8,10 @@ import Footer from "../components/Footer";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
+import CarouselFade from "../components/Carousel";
+import blackstars1 from "../images/blackstars1.jpeg";
+import blackstars2 from "../images/blackstars2.jpeg";
+import kidsclothed from "../images/kidsclothed.jpeg";
 
 const LandingPage = () => {
   // define useNavigate as navigate to navigate to the store page when continue shopping button is clicked
@@ -71,7 +74,11 @@ const LandingPage = () => {
       {/* Carousel row */}
       <Row>
         <Col className="carousel-column">
-          <CarouselFadeExample />
+          <CarouselFade
+            image1={blackstars1}
+            image2={blackstars2}
+            image3={kidsclothed}
+          />
         </Col>
         {/* First Ads cards row */}
         <div className="carousel-cards Ads-cards">

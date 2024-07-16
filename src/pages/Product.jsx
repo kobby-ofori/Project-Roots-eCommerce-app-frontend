@@ -66,7 +66,7 @@ const Product = () => {
             <Col key={product._id} md={3} xs={6}>
               <div className="card-wrapper">
                 {/* a wrapper for spacing */}
-                <Card style={{ width: "18rem" }} className="card custom-card">
+                <Card className="card custom-card">
                   <Card.Img
                     variant="top"
                     src={`data:image/png;base64,${product.image}`}
@@ -75,10 +75,10 @@ const Product = () => {
                     height={"150px"}
                   />
                   <Card.Body className="custom-card-body">
-                    <Card.Title>{product.title}</Card.Title>
-                    <Card.Text>by {product.name}</Card.Text>
-                    <Card.Text>{product.description}</Card.Text>
-                    <Card.Text className="text-center">
+                    <Card.Title className="custom-card-body-content">{product.title}</Card.Title>
+                    <Card.Text className="custom-card-body-content">by {product.name}</Card.Text>
+                    <Card.Text className="custom-card-body-content">{product.description}</Card.Text>
+                    <Card.Text className="text-center custom-card-body-content">
                       GHS {product.price}
                     </Card.Text>
 

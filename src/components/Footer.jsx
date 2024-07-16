@@ -1,5 +1,6 @@
-import React from 'react'
-import { Col, Container, Row } from 'react-bootstrap'
+import React from "react";
+import { Col, Container, Row } from "react-bootstrap";
+import "./Footer.css";
 // import { useNavigate } from 'react-router-dom'
 
 const Footer = () => {
@@ -52,26 +53,26 @@ const Footer = () => {
 
       <Row className="info-section-row">
         <hr />
-        <Col>
+        <Col md={3} sm={3} xs={3}>
           <h6 className="info-heading">Shop</h6>
           <p>Store</p>
           <p>Kente</p>
           <p>Smock</p>
           <p>Kete</p>
         </Col>
-        <Col>
+        <Col md={3} sm={3} xs={3}>
           <h6 className="info-heading">Account</h6>
           <p>Manage your Profile</p>
           <p>Roots Store Account</p>
           <p>Roots Database</p>
         </Col>
-        <Col>
+        <Col md={3} sm={3} xs={3}>
           <h6 className="info-heading">For Businesses</h6>
           <p>Get an online Store</p>
           <p>Sell on Roots</p>
           <p>Buy on Roots</p>
         </Col>
-        <Col>
+        <Col md={3} sm={3} xs={3}>
           <h6 className="info-heading">Roots Values</h6>
           <p>Heritage</p>
           <p>Innovation</p>
@@ -85,7 +86,7 @@ const Footer = () => {
       <Row className="justify-content-md-center landing-footer">
         <hr />
         <Col xs lg="3">
-          <p>Copyright &copy; 2023 - {currentYear} Roots Inc. All rights reserved.</p>
+          <p className="text-center">Accra, Ghana</p>
         </Col>
         <Col md="auto">
           <a href="/infosection">
@@ -98,11 +99,14 @@ const Footer = () => {
           </a>
         </Col>
         <Col xs lg="3">
-          <p className="text-center">Accra, Ghana</p>
+          <p>
+            Copyright &copy; 2023 - {currentYear} Roots Inc. All rights
+            reserved.
+          </p>
         </Col>
       </Row>
     </Container>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;

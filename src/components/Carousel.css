@@ -1,0 +1,14 @@
+.carousel-pic{
+  width: 100%;
+  height: 500px;
+}
+
+/* @MEDIA QUERIES */
+
+/* Extra small devices (phones, 350px and down) */
+@media only screen and (max-width: 450px) {
+  .carousel-pic{
+    width: 100%;
+    height: 300px;
+  }
+}
