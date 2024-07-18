@@ -4,10 +4,13 @@ import { HiSaveAs } from "react-icons/hi";
 import axios from "axios"; // Import Axios
 //import { postURL } from "../utils/constant"; // Import API endpoint URL
 import ProductsList from "../components/ProductsList";
+import { useAuthContext } from "../hooks/useAuthContext";
 //import useAuthContext for user
 // import {useAuthContext} from "../hooks/useAuthContext"
 
 const PostProduct = () => {
+  const {user} = useAuthContext();
+  const [productEmail, setProductEmail] = useState(user ? user.email : "");
   const [name, setSellerName] = useState(""); // State for the trader name
   const [title, setProductName] = useState(""); // State for the product name
   const [description, setProductDescription] = useState(""); // State for the product description
@@ -22,6 +25,7 @@ const PostProduct = () => {
     
     try {
       const formData = new FormData();
+      formData.append("productEmail", productEmail)
       formData.append("name", name);
       formData.append("title", title);
       formData.append("description", description);
@@ -70,6 +74,14 @@ const PostProduct = () => {
       <Col md={6} xs={12}>
         <Form onSubmit={handleSubmit}>
           <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+            <Form.Label>email</Form.Label>
+            <Form.Control
+              type="text"
+              placeholder="Email"
+              value={productEmail}
+              onChange={(e) => setProductEmail(e.target.value)}
+              required
+            />
             <Form.Label>name</Form.Label>
             <Form.Control
               type="text"

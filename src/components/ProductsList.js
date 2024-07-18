@@ -3,6 +3,7 @@ import { Container, Row, Button, Modal, Alert } from "react-bootstrap";
 import axios from "axios";
 import { baseURL } from "../utils/constant";
 import ProductMethods from "./ProductMethods";
+import { useAuthContext } from "../hooks/useAuthContext";
 // new import
 // import { useAuthContext } from "../hooks/useAuthContext";
 
@@ -12,6 +13,7 @@ const ProductsList = () => {
   const [selectedProduct, setSelectedProduct] = useState(null);
   const [successAlert, setSuccessAlert] = useState(false);
   const [errorAlert, setErrorAlert] = useState(false);
+  const {user} = useAuthContext();
   // new code
   // const {user} = useAuthContext
   // end of new code
@@ -21,18 +23,22 @@ const ProductsList = () => {
     axios
       .get(`${baseURL}`)
       .then((response) => {
-        setProducts(response.data);
+        // Filter products to show only those that match the user's email
+        const userProducts = response.data.filter(
+          (product) => product.productEmail === user.email
+        );
+        setProducts(userProducts);
       })
       .catch((error) => {
         console.error("Error:", error);
       });
-  }, []);
+  }, [user.email]);
 
   const handleDelete = (productId) => {
     //new code
-    // if (!user) {
-    //   return
-    // }
+    if (!user) {
+     return
+     }
     //end of new code
 
     const confirmDelete = window.confirm(

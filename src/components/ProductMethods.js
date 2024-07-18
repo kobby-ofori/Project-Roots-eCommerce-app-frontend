@@ -25,7 +25,13 @@ const ProductMethods = ({ product, onDelete, onUpdate }) => {
       <Row>
         <Col md="12">
           <Card body>
-            {product.name}
+          <Card.Img
+                    variant="top"
+                    src={`data:image/png;base64,${product.image}`}
+                    alt="attire-pics"
+                    style={{width:"80px", height:"100px", marginRight:"10px"}}
+                  />
+            {product.title}
             <Button style={{ marginRight: "15px" }} onClick={handleEdit}>
               <CiEdit />
             </Button>
